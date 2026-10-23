@@ -5,6 +5,7 @@
  * Copyright (c) 2023 Advanced Micro Devices, Inc. All rights reserved.
  */
 
+#include <linux/vmalloc.h>
 #include <linux/kthread.h>
 #include <linux/delay.h>
 #include <linux/device.h>

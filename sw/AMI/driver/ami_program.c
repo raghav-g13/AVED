@@ -89,7 +89,7 @@ static int do_image_download(struct amc_control_ctxt *amc_ctrl_ctxt, uint8_t *bu
 				break;
 
 			if (efd_ctx)
-				eventfd_signal(efd_ctx, bytes_to_write);
+				eventfd_signal(efd_ctx);
 		} else {
 			uint32_t boot_tag = INVALID_BOOT_TAG;
 
@@ -143,7 +143,7 @@ static int do_image_download(struct amc_control_ctxt *amc_ctrl_ctxt, uint8_t *bu
 			buf, (PDI_CHUNK_SIZE * PDI_CHUNK_MULTIPLIER));
 
 		if (!ret && efd_ctx)
-			eventfd_signal(efd_ctx, (PDI_CHUNK_SIZE * PDI_CHUNK_MULTIPLIER));
+			eventfd_signal(efd_ctx);
 	}
 
 	if (ret)

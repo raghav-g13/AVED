@@ -1420,5 +1420,5 @@ void remove_hwmon(struct device *dev)
 	if (!dev)
 		return;
 
-	devm_hwmon_device_unregister(dev);
+	hwmon_device_unregister(dev);
 }
